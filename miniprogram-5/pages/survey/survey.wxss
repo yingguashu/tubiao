@@ -1,0 +1,10 @@
+@import "/font.wxss";
+
+.top_title{
+  display: flex;
+  flex-direction: column;
+}
+.title_text{
+  margin: 10rpx 0;
+  font-size: 38rpx;
+}

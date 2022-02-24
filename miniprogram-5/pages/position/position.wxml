@@ -1,0 +1,6 @@
+<view>
+<view>位置信息</view>
+<view>
+<button bindtap="onGetCedian" size="mini" type="primary" plain="true">获取测点数据</button>
+</view>
+</view>

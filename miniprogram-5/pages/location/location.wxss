@@ -1,0 +1,13 @@
+.Test_top{
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  align-items: center;
+}
+.Test_input{
+  border: 1rpx solid #27b8b8;
+  border-radius: 35rpx;
+  margin: 10rpx;
+  height: 60rpx;
+  width: 80%;
+}

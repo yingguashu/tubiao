@@ -1,0 +1,6 @@
+<view>
+<view>
+<button size="mini" type="primary" plain bindtap="onGetgroup">获取信息</button>
+<button size="mini" type="primary" plain bindtap="onCS">测试字符串</button>
+</view>
+</view>

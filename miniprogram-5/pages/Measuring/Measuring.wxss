@@ -1,0 +1,20 @@
+@import "./font.wxss";
+
+.Me_title{
+  display: flex;
+  justify-content: space-between;
+}
+.Me_top{
+  display: flex;
+  border: 1rpx solid rgb(190, 101, 190);
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+}
+.Me_name text{
+  margin: 6rpx 10rpx;
+  font-size: 40rpx;
+}
+.Me_top text{
+  width: 30%;
+}

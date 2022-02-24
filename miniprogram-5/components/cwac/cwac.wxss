@@ -1,0 +1,7 @@
+.index_img .imge{
+  width: 100rpx;
+  /* position: absolute;
+  right: 0rpx;
+  top: 0; */
+  z-index: 1;
+}

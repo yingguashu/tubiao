@@ -1,0 +1,68 @@
+.Test_top{
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  align-items: center;
+}
+.Test_input{
+  border: 1rpx solid #27b8b8;
+  border-radius: 35rpx;
+  margin: 10rpx;
+  height: 60rpx;
+  width: 80%;
+}
+.text{
+  display: flex;
+  justify-content: space-around;
+  background-color: #2ce4e4;
+  padding:10rpx 0 ;
+  border-radius: 8rpx;
+}
+.content{
+  display: flex;
+  background-color: #f3f5f5;
+  height: 80rpx;
+  /* flex-direction: row;
+  justify-content: center;
+  border-radius: 8rpx; */
+}
+.name{
+  flex: 1;
+  font-size: 28rpx;
+  text-align: center;
+  border: 1rpx solid #dddddd;
+}
+.loca_title{
+  font-size: 38rpx;
+  color: #10a3a3;
+  text-align: center;
+  background-color: rgb(246, 241, 247);
+  padding: 10rpx 0;
+  border-radius: 8rpx;
+}
+.title_te{
+  font-size: 28rpx;
+  color: #10a3a3;
+  padding: 8rpx 0;
+  /* border-radius: 6rpx; */
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: #ffffff;
+}
+.title_te view{
+  flex: 1;
+  width: 150rpx;
+}
+.title_zhi{
+  border-radius: 10rpx;
+  margin: 4rpx 15rpx 2rpx 0;
+  color: black;
+  background-color: rgb(247, 247, 247);
+}
+.title_vie{
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 18rpx;
+  /* border: 1rpx solid darkblue; */
+}

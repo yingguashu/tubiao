@@ -1,0 +1,29 @@
+<wxs module="filters" src="../../utils/filter.wxs"></wxs>
+<view>第{{index}}个数据</view>
+<view class="flex-direction">
+  <view class="depth_title">
+    <view>数据范围</view>
+    <view>深度</view>
+    <view>x方向</view>
+    <view>y方向</view>
+    <view>传感器地址</view>
+    <view>传感器温度</view>
+  </view>
+  <view wx:for="{{dt}}" wx:key="s" class="depth_data">
+    <view>{{index}}</view>
+    <view>{{item.k}}</view>
+    <view>{{filters.toFix(item.v)}}</view>
+    <view>{{filters.toFix(item.v2)}}</view>
+    <view>{{item.s}}</view>
+    <view>{{item.t}}</view>
+  </view>
+  <view class="container">
+    <ec-canvas id="mychart-dom-graph" canvas-id="mychart-graph" ec="{{ ec }}"></ec-canvas>
+  </view>
+  <view class="container_ber">
+    <ec-canvas id="mychart-dom-graph-line" canvas-id="mychart-graph-line" ec="{{ ecl }}"></ec-canvas>
+  </view>
+  <!-- <view class="container">
+    <category index="{{index}}"></category>
+  </view> -->
+</view>

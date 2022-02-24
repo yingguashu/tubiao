@@ -1,0 +1,5 @@
+<view>
+<view class="demo_top">
+<button class="demo_but" bindtap="download" type="primary" size="mini">下载Excel</button>
+</view>
+</view>

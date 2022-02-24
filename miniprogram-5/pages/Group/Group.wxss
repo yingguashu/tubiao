@@ -1,0 +1,25 @@
+page{
+  background-color: rgb(245, 248, 248);
+}
+.top_for{
+  height: 80rpx;
+  border: 1rpx solid wheat;
+  display: flex;
+  align-items: center;
+}
+.Test_top{
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+}
+.Test_input{
+  border: 1rpx solid #27b8b8;
+  border-radius: 35rpx;
+  margin: 10rpx;
+  height: 60rpx;
+  width: 80%;
+}

@@ -1,0 +1,22 @@
+.top{
+  display: flex;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+}
+.top_vie{
+  height: 120rpx;
+  border: 4rpx solid #20e2a1;
+  margin-bottom: 20rpx;
+}
+.top_vie navigator{
+  width: 80%;
+  height: 100%;
+  float: right;
+  border: 1rpx solid #2033e2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

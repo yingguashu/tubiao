@@ -1,0 +1,6 @@
+.damo_top{
+  display: flex;
+}
+.demo_but{
+  margin-left: 10rpx;
+}

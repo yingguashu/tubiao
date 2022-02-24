@@ -1,0 +1,10 @@
+<view>
+<view class="top" bindtap="onDelete">清空记录</view>
+  <view class="history_top">
+    <view wx:for="{{history}}" wx:key="{{_id}}" class="top_vie">
+      <navigator url="{{item.page}}?index={{item.index}}">
+        <view>{{item.i}}设备在</view><view>{{item.time}}的数据</view>
+      </navigator>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+<view>
+  <view class="Test_top">
+    <!-- 获取输入的设备编号 -->
+    <input type="text" value="107210500023" confirm-type="search" confirm-hold="true" bindconfirm="search" class="Test_input" bindblur="name" name="Equipment" maxlength="20"></input>
+    <button bindtap="onTest" size="mini" type="primary">获取</button>
+  </view>
+  <view class="enq_text">
+    <!-- 标题 -->
+    <view class="text">
+      <text class="text_title">设备编号</text>
+      <text class="text_title">采集时间</text>
+      <text class="text_title">子协议</text>
+    </view>
+    <!-- 查询信息 -->
+    <view class="contents" wx:for="{{content}}" wx:key="t" bin>
+      <view class="content" bindtap="onToTest" data-id="{{index}}">
+        <view class="name">{{item.i}}</view>
+        <view class="name">{{item.t}}</view>
+        <view class="name">{{item.v}}</view>
+      </view>
+    </view>
+    <!-- 位置信息 -->
+    <view wx:if="{{locations}}">
+      <view class="loca_title">位置信息:<text style="font-size: 30rpx;">{{locations.t}}</text></view>
+      <view class="location">
+        <view class="title_te">
+          <view class="title_vie">经度</view>
+          <view class="title_zhi">{{locations.lng}}</view>
+          <view class="title_vie">纬度</view>
+          <view class="title_zhi">{{locations.lat}}</view>
+        </view>
+        <view class="title_te">
+          <view class="title_vie">外部电压</view>
+          <view class="title_zhi">{{locations.alt}}</view>
+          <view class="title_vie">内部电压</view>
+          <view class="title_zhi">{{locations.b}}</view>
+        </view>
+        <view class="title_te">
+          <view class="title_vie">进水检测</view>
+          <view class="title_zhi">{{locations.v}}</view>
+          <view class="title_vie">太阳能板电压</view>
+          <view class="title_zhi">{{locations.a}}</view>
+        </view>
+      </view>
+      <view class="title_tes">
+      </view>
+    </view>
+  </view>
+</view>

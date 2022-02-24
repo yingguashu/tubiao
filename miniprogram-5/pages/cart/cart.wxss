@@ -1,0 +1,46 @@
+.depth_title{
+  display: flex;
+  justify-content: center;
+}
+.depth_data{
+  display: flex;
+}
+.depth_title view{
+  flex: 1;
+  color: aliceblue;
+  background-color: #da32a2;
+  /* margin-left: 20rpx; */
+}
+.depth_data view{
+  flex: 1;
+  font-family: 'FangSong';
+  font-size: 32rpx;
+  border: 1rpx solid #1c55d1;
+  /* margin-left: 20rpx; */
+}
+/**app.wxss**/
+.container ec-canvas{
+  position: absolute;
+  top: 110%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+} 
+.container_ber {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+/**index.wxss**/
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}

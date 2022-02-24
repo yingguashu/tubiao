@@ -1,0 +1,20 @@
+<view class="mester">
+  <view class="mester_title">
+    <text class="name">id</text>
+    <text class="name">钢筋计力度大小</text>
+    <text class="name">温度/°C</text>
+  </view>
+    <view wx:for="{{d}}" wx:key="f" class="mester_text">
+      <text class="text">{{index}}</text>
+      <text class="text">{{item.f}}</text>
+      <text class="text">{{item.t}}</text>
+    </view>
+</view>
+<!-- 柱状图 -->
+<view class="container">
+  <ec-canvas id="mychart-dom-graph-line" canvas-id="mychart-graph-line" ec="{{ el }}"></ec-canvas>
+</view>
+<!-- 折线图 -->
+<view class="container2">
+  <ec-canvas class="line" id="mychart-dom-graph-line" canvas-id="mychart-graph-line" ec="{{ ec }}"></ec-canvas>
+</view>

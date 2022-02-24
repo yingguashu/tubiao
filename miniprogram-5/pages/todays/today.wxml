@@ -1,0 +1,6 @@
+<view>{{name}}</view>
+<view class="container">
+    <ec-canvas id="mychart-dom-graph" canvas-id="mychart-graph" ec="{{ ec }}"></ec-canvas>
+<abc binditemChange="Receiving" class="abc"></abc>
+<cwac pageurl="{{pageurl}}" style="position: absolute;right: 0rpx; top: 0;z-index: 1;"></cwac>
+</view>

@@ -1,0 +1,98 @@
+<view>
+  <block wx:if="{{turn_top}}">
+    <view class="trun_top">
+      <text>基准时刻 2021/11/16 19:30</text>
+      <text>上次时刻 2021/11/25 16:30</text>
+      <text>监测时刻 2021/11/25 17:30</text>
+      <view class="triangle" bindtap="down"></view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="trun_top">
+      <div class="corner" bindtap="down"></div>
+    </view>
+  </block>
+  <scroll-view scroll-into-view="{{toIndex}}" class="scrs" scroll-y scroll-with-animation="true" scroll-y="true">
+    <view class="turn_abs">
+      <text class="abs_text" bindtap="onCexie">测斜(0米)</text>
+      <text class="abs_text" bindtap="onBianQU">变化曲线</text>
+      <text class="abs_text" bindtap="onBianFan">变化范围</text>
+      <text class="abs_text" bindtap="onQUshi">变化趋势</text>
+      <text class="abs_text" bindtap="onGuanxing">管型曲线</text>
+      <text class="abs_text" bindtap="onShuju">详细数据</text>
+      <text class="abs_text" bindtap="onBuzhi">布置图</text>
+    </view>
+    <view class="abs_left">
+      <view class="left_view" bindtap="one">
+        <image mode="widthFix" src="/image/rili.png"></image>
+      </view>
+      <view class="left_view" bindtap="one">
+        <image mode="widthFix" src="/image/jia.png"></image>
+      </view>
+      <view class="left_view" bindtap="one">
+        <image mode="widthFix" src="/image/Excel.png"></image>
+      </view>
+      <view class="left_view" bindtap="one">
+        <image mode="widthFix" src="/image/qushi.png"></image>
+      </view>
+      <view class="left_view" bindtap="one">
+        <image mode="widthFix" src="/image/sezhi.png"></image>
+      </view>
+      <view class="left_view" bindtap="one">
+        <image mode="widthFix" src="/image/shuxin.png"></image>
+      </view>
+    </view>
+    <view class="turn">
+
+      <view class="top_text">测斜累计变化曲线图</view>
+      <view class="turn_echarts" id="A">
+        <view class="container_line">
+          <ec-canvas id="mychart-dom-graph-line" class="line_one" canvas-id="mychart-graph-line" ec="{{ ec }}"></ec-canvas>
+        </view>
+      </view>
+
+      <view class="top_text">位移变化</view>
+      <view class="turn_echarts" id="B">
+        <view class="container_line">
+          <ec-canvas id="mychart-dom-graph-line" class="line_one" canvas-id="mychart-graph-line" ec="{{ ec }}"></ec-canvas>
+        </view>
+      </view>
+
+      <view class="top_text">温度变化</view>
+      <view class="turn_echarts" id="C">
+        <view class="container_line">
+          <ec-canvas id="mychart-dom-graph-line" class="line_one" canvas-id="mychart-graph-line" ec="{{ ec }}"></ec-canvas>
+        </view>
+      </view>
+
+      <view class="top_text">位移变化曲线图</view>
+      <view class="turn_echarts" id="D">
+        <view class="container_line">
+          <ec-canvas id="mychart-dom-graph-line" class="line_one" canvas-id="mychart-graph-line" ec="{{ ec }}"></ec-canvas>
+        </view>
+      </view>
+
+      <view class="top_text">测斜管型曲线图</view>
+      <view class="turn_echarts" id="E">
+        <view class="container_line">
+          <ec-canvas id="mychart-dom-graph-line" class="line_one" canvas-id="mychart-graph-line" ec="{{ ec }}"></ec-canvas>
+        </view>
+      </view>
+
+      <view class="top_text">测斜孔数据统计</view>
+      <view class="turn_bottom" id="F">
+        <view class="bottom_text">深度(m)</view>
+        <view class="bottom_text">初始数据</view>
+        <view class="bottom_text">上次数据</view>
+        <view class="bottom_text">本次数据</view>
+        <view class="bottom_text">单次变化</view>
+        <view class="bottom_text">累计变化</view>
+      </view>
+      <view class="turn_text">
+        <view class="{{}}" wx:for="{{dt}}" wx:key="{{v2}}">
+          <view>{{item.k/1000}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

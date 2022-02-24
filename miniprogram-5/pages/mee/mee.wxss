@@ -1,0 +1,28 @@
+/* .mester{
+  display: flex;
+} */
+.mester_title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.name{
+  border: 1rpx solid #0026ff;
+  display: flex;
+  justify-content: center;
+}
+.mester_title text{
+  flex: 1;
+  background-color: #e03cca;
+
+}
+
+.mester_text{
+  display: flex;
+}
+.mester_text .text{
+  flex: 1;
+  border: 3rpx solid #c0c0c0;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "demo":"/components/demo8/demo8",
+    "cwac":"/components/cwac/cwac"
+  },
+  "navigationBarTitleText": "数据信息"
+}

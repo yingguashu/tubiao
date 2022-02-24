@@ -1,0 +1,5 @@
+<view>
+  <picker header-text="时间回溯" mode="multiSelector" bindchange="onbindSelect" range="{{hourtime}}" bindcolumnchange="onbindPickChoke" >选择时间
+  <text wx:if="{{flag}}">{{hourtime[0][value[0]]}}年{{hourtime[1][value[1]]}}月{{hourtime[2][value[2]]}}日{{hourtime[3][value[3]]}}小时{{hourtime[4][value[4]]}}分钟</text>
+  </picker>
+</view>

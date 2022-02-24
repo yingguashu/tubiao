@@ -1,0 +1,12 @@
+<view>
+  <view class="Group_top">
+    <view class="Test_top">
+    <!-- 获取输入的设备编号 -->
+    <input type="text" confirm-type="search" confirm-hold="true" bindconfirm="search" class="Test_input" bindblur="name" name="Equipment" maxlength="20"></input>
+    <button bindtap="onTest" size="mini" type="primary">搜索</button>
+  </view>
+    <view class="top_for" wx:for="{{group}}" wx:key="id">
+      <text class="top_text" data-gid="{{item.groupId}}" bindtap="onGetChild">{{item.name}}</text>
+    </view>
+  </view>
+</view>

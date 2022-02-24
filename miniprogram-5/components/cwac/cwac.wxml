@@ -1,0 +1,3 @@
+<view class="index_img">
+  <image mode="widthFix" bindtap="xcx" src="../../image/xcx.png" class="imge"></image>
+</view>

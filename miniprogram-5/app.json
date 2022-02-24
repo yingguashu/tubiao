@@ -1,0 +1,60 @@
+{
+  "pages":[
+    "pages/start/start",
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/meter/meter",
+    "pages/mester/mester",
+    "pages/mee/mee",
+    "pages/todays/today",
+    "pages/collect/collect",
+    "pages/turn/turn",
+    "pages/sbfc/sbfc",
+    "pages/info/info",
+    "pages/history/history",
+    "pages/test/test",
+    "pages/enquire/enquire",
+    "pages/location/location",
+    "pages/position/position",
+    "pages/register/register",
+    "pages/Group/Group",
+    "pages/GroupEng/GroupEng",
+    "pages/Measuring/Measuring",
+    "pages/survey/survey"
+  ],
+
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#0066ff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "image/首页.png",
+      "selectedIconPath": "image/首页-02.png"
+    },{
+      "pagePath": "pages/position/position",
+      "text": "测试模板",
+      "iconPath": "image/neiron.png",
+      "selectedIconPath": "image/neiron2.png"
+    },
+    {
+      "pagePath": "pages/meter/meter",
+      "text": "钢筋计",
+      "iconPath": "image/分类.png",
+      "selectedIconPath": "image/分类-02.png"
+    },{
+      "pagePath": "pages/info/info",
+      "text": "我的",
+      "iconPath": "image/我的.png",
+      "selectedIconPath": "image/我的-02.png"
+    }]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "图表",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {   
+     "ec-canvas": "../../ec-canvas/ec-canvas",
+     "abc":"../../components/abc/abc",
+     "cwac":"../../components/cwac/cwac"
+    },
+  "navigationBarTitleText": "数据展示"
+}

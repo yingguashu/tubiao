@@ -1,0 +1,3 @@
+<view class="container_line">
+  <ec-canvas id="mychart-dom-graph-line" canvas-id="mychart-graph-line" ec="{{ ec }}"></ec-canvas>
+</view>

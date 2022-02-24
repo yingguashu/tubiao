@@ -1,0 +1,29 @@
+<view>
+  <!-- <view>{{cid}}</view> -->
+  <view class="SY_top">
+    <view class="top_title">
+      <view class="title_text">
+        <text>测点名称：{{Result.fn}}</text>
+        <text class="{{Result.ic}}" style="color: rgb(100, 212, 175);margin-left: 8rpx;"></text>
+      </view>
+      <text class="title_text">测点代码：{{Result.n}}</text>
+      <text class="title_text">设备编号：{{Result.rd}}</text>
+      <text class="title_text">监测类型：{{value}}</text>
+    </view>
+  </view>
+  <view>
+  <view>
+  <text>传感器地址</text>
+  <text>监测长度/mm</text>
+  <text>变化系数</text>
+  <text>型号</text>
+  </view>
+  <view wx:for="{{Result.mu[0].s}}" wx:key="{{sn}}">
+  <text>{{item.sn}}</text>
+  <text>{{item.l}}</text>
+  <text>{{item.r}}</text>
+  <text>{{item.s}}</text>
+  <text>{{item.st}}</text>
+  </view>
+  </view>
+</view>

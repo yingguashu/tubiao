@@ -1,0 +1,67 @@
+<view>
+  <view class="Test_top">
+  <view class="top_v" style="margin-top:10rpx;">
+    <view class="top_v1">
+      <text class="top_text">设备编号</text>
+      <text class="top_text">时间</text>
+      <text class="top_text">子协议</text>
+    </view>
+    <view class="top_v1" style="margin-bottom:10rpx;">
+      <text class="top_text">{{Equipment}}</text>
+      <text class="top_text">{{t}}</text>
+      <text class="top_text">{{v}}</text>
+    </view>
+  </view>
+  </view>
+  <!-- 选择要显示的数据 -->
+  <view class="Test_check">
+    <checkbox-group bindchange="handleItemchnage">
+      <label wx:for="{{titleArr}}" wx:for-item="item" wx:key="id">
+        <checkbox value="{{item.name}}" checked="{{item.value}}">{{item.name}}</checkbox>
+      </label>
+    </checkbox-group>
+  </view>
+  <!-- 数据代表对应颜色 -->
+  <view class="Test_but">
+    <view class="but_abnormal">
+      <view style="height: 40rpx;background-color: #9932CC;width: 40rpx;border-radius: 8rpx;"></view>
+      <view class="but_text">正常数据</view>
+    </view>
+    <view class="but_abnormal">
+      <view style="height: 40rpx;background-color: #DAA520;width: 40rpx;border-radius: 8rpx;"></view>
+      <view class="but_text">低异常数据</view>
+    </view>
+    <view class="but_abnormal">
+      <view style="height: 40rpx;background-color: #FF0088;width: 40rpx;border-radius: 8rpx;"></view>
+      <view class="but_text">高异常颜色</view>
+    </view>
+  </view>
+  <!-- 数据内容 -->
+  <view class="Test_text">
+    <!-- 对返回的数据循环 -->
+    <view class="text_title">
+      <!-- 标题 -->
+    </view>
+    <scroll-view scroll-x>
+      <view class="text_name" style="display: flex;width: {{Selected}};" wx:for="{{nameArr}}" wx:key="{{1}}">
+        <view wx:if="{{titleArr[0].value}}" class="ifview" style="color: {{item[0]>1000?'#FF0088':item[0]<1?'#DAA520':'#9932CC'}};">{{item[0]}}</view>
+        <view wx:if="{{titleArr[1].value}}" class="ifview" style="color: {{item[1]>1000?'#FF0088':item[1]<1?'#DAA520':'#9932CC'}};">{{item[1]}}</view>
+        <view wx:if="{{titleArr[2].value}}" class="ifview" style="color: {{item[2]>1000?'#FF0088':item[2]<1?'#DAA520':'#9932CC'}};">{{item[2]}}</view>
+        <view wx:if="{{titleArr[3].value}}" class="ifview" style="color: {{item[3]>1000?'#FF0088':item[3]<1?'#DAA520':'#9932CC'}};">{{item[3]}}</view>
+        <view wx:if="{{titleArr[4].value}}" class="ifview" style="color: {{item[4]>1000?'#FF0088':item[4]<1?'#DAA520':'#9932CC'}};">{{item[4]}}</view>
+        <view wx:if="{{titleArr[5].value}}" class="ifview" style="color: {{item[5]>1000?'#FF0088':item[5]<1?'#DAA520':'#9932CC'}};">{{item[5]}}</view>
+        <view wx:if="{{titleArr[6].value}}" class="ifview" style="color: {{item[6]>1000?'#FF0088':item[6]<1?'#DAA520':'#9932CC'}};">{{item[6]}}</view>
+        <view wx:if="{{titleArr[7].value}}" class="ifview" style="color: {{item[7]>1000?'#FF0088':item[7]<1?'#DAA520':'#9932CC'}};">{{item[7]}}</view>
+        <view wx:if="{{titleArr[8].value}}" class="ifview" style="color: {{item[8]>1000?'#FF0088':item[8]<1?'#DAA520':'#9932CC'}};">{{item[8]}}</view>
+        <!-- 内容 -->
+        <!-- <view wx:for="{{d}}" class="name_ne" wx:for-item="de">
+        <view>{{de[2]}}</view>
+      </view> -->
+      </view>
+    </scroll-view>
+  </view>
+  <view class="Test_comp" style="display: flex;align-items: center;justify-content: space-around;">
+  <demo content="{{nameArr}}"></demo>
+  <cwac pageurl="{{pageurl}}"></cwac>
+  </view>
+</view>

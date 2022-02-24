@@ -1,0 +1,87 @@
+<!--start.wxml-->
+<view class="container">
+  <view class="remind-box" wx:if="{{remind}}">
+    <image class="remind-img" src="/image/more/loading.gif"></image>
+  </view>
+  <block wx:else>
+    <image class="title" src="/image/more/title8.png"></image>
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+        <view class="logo"></view>>
+        <image class="wave" src="/image/more/wave.png" mode="aspectFill"></image>
+        <image class="wave wave-bg" src="/image/more/wave.png" mode="aspectFill"></image>
+      </view>
+      <view class="bd">
+        <view class="smalltitle">
+          <view class="smal_top">
+          <view class="top_view" style="border-bottom: {{currentData>0?2:4}}rpx solid {{currentData==0?'#5599ff':'#aaaaaa'}};">
+            <text class="top_text"  data-current = "0" bindtap='checkCurrent'>密码登录</text>
+          </view>
+          <view class="top_view" style="border-bottom: {{currentData>0?4:2}}rpx solid {{currentData==1?'#5599ff':'#aaaaaa'}};">
+            <text class="top_text" data-current = "1" bindtap='checkCurrent'>短信登录</text>
+          </view>
+          </view>
+          <swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300">
+          <!-- 密码登录 -->
+            <swiper-item>
+              <view>
+                <view class="smal_vie">
+                  <input class="smal_inp" bindfocus="losephone" bindblur="GetName" placeholder="请输入账号或手机号" confirm-type="next" confirm-hold="true" maxlength="30" style="border:1rpx solid {{sty>=3?'#949393':'#6b45d3'}};"></input>
+                </view>
+                <view style="height: 30rpx;">
+                  <text wx:if="{{mobile}}" style="font-size: 24rpx;margin-left: 5%;color: rgb(224, 44, 134);">请输入正确手机号</text>
+                </view>
+                <view class="smal_vie" style="margin-top: 20rpx;">
+                  <input class="smal_inp" bindfocus="losepass" placeholder="请输入密码" bindblur="pass" maxlength="8" style="border:1rpx solid {{sty<=3?'#949393':'#6b45d3'}};"></input>
+                </view>
+                <view class="sma_regis">
+                  <text class="regis" bindtap="goRgei">没有账号?去注册>>></text>
+                </view>
+              </view>
+            </swiper-item>
+            <!-- 短信登录 -->
+            <swiper-item>
+              <view>
+                <view class="smal_vie2">
+                  <text class="smal_text2">+86</text>
+                  <input class="smal_inp2" bindfocus="losephone" bindblur="phone" placeholder="请输入手机号" confirm-type="next" confirm-hold="true" maxlength="15" style="border:1rpx solid {{sty>=3?'#949393':'#6b45d3'}};"></input>
+                </view>
+                <view style="height: 30rpx;">
+                  <text wx:if="{{mobile}}" style="font-size: 24rpx;margin-left: 5%;color: rgb(224, 44, 134);">请输入正确手机号</text>
+                </view>
+                <view class="smal_vie2" style="margin-top: 20rpx;">
+                  <input class="smal_inp2" bindfocus="losepass" placeholder="验证码" bindblur="SMSpass" maxlength="8" style="border:1rpx solid {{sty<=3?'#949393':'#6b45d3'}};width: 60%;"></input>
+                  <text class="hqyzm" bindtap="GetYZM">获取验证码</text>
+                </view>
+                <view class="sma_regis">
+                  <text class="regis" bindtap="goRgei">没有账号?去注册>>></text>
+                </view>
+              </view>
+            </swiper-item>
+            <!-- 未定义 -->
+            <swiper-item>
+              <view>
+                <view class="smal_vie">
+                  <input class="smal_inp" bindfocus="losephone" bindblur="phone" placeholder="请输入账号或手机号" confirm-type="next" confirm-hold="true" maxlength="15" style="border:1rpx solid {{sty>=3?'#949393':'#6b45d3'}};"></input>
+                </view>
+                <view style="height: 30rpx;">
+                  <text wx:if="{{mobile}}" style="font-size: 24rpx;margin-left: 5%;color: rgb(224, 44, 134);">请输入正确手机号</text>
+                </view>
+                <view class="smal_vie" style="margin-top: 20rpx;">
+                  <input class="smal_inp" bindfocus="losepass" placeholder="请输入密码" bindblur="pass" maxlength="8" style="border:1rpx solid {{sty<=3?'#949393':'#6b45d3'}};"></input>
+                </view>
+                <view class="sma_regis">
+                  <text class="regis" bindtap="goRgei">没有账号?去注册>>></text>
+                </view>
+              </view>
+            </swiper-item>
+          </swiper>
+        </view>
+        <view class="confirm-btn" bindtap="goToIndex">
+          <text>立即登录</text>
+        </view>
+        <text class="copyright">上海航鼎电子科技发展有限公司</text>
+      </view>
+    </view>
+  </block>
+</view>

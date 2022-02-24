@@ -1,0 +1,80 @@
+<view>
+	<view class="top">
+		<view class="center">
+			<view class="center_top">
+				<view class="center_img">
+					<image src="{{userinfo?userinfo.avatarUrl:'/image/kafei.png'}}" bindtap="picture" data-big="{{userinfo.avatarUrl}}" style="height: 200rpx;width: 200rpx;"></image>
+				</view>
+				<view class="center_info">
+					<block wx:if="{{userinfo}}">
+						<view class="center_name">{{userinfo.nickName}}
+						</view>
+						<view class="center_phone">基本信息</view>
+					</block>
+					<block wx:else>
+						<button bindtap="bindGetUser" size="mini" plain type="primary">请登录</button>
+					</block>
+				</view>
+			</view>
+			<view class="center_down">
+				<view class="center_rank">
+					<image class="rank_icon" src="../../image/shouchang.png"></image>
+					<text class="rank_text">我的收藏</text>
+				</view>
+				<view class="center_score">
+					<image class="rank_icon" src="../../image/guanzhu.png"></image>
+					<text class="rank_text">我的关注</text>
+				</view>
+				<view class="center_history">
+					<navigator url="../history/history">
+						<image class="rank_icon" src="../../image/lishi.png"></image>
+						<text class="rank_text">历史记录</text>
+					</navigator>
+				</view>
+			</view>
+			<!-- 设置 -->
+			<view class="center_sezi" bindtap="sezi">
+				<image mode="widthFix" src="/image/sezhi.png"></image>
+			</view>
+		</view>
+		<image src='http://docfile.funkingka.cn/FqzmiFqvXbHg-cfbquNRlawHUgHt' mode='scaleToFill' class='gif-wave'></image>
+	</view>
+	<view class="info_xinxi">
+		<view class="xinxi_vie" bindtap="onToLocation">
+			<image mode="widthFix" src="../../image/gongchen.png"></image>
+			<text>工程列表</text>
+		</view>
+		<view class="xinxi_vie" bindtap="onGetGroup">
+			<image mode="widthFix" src="../../image/fenzu.png"></image>
+			<text>分组管理</text>
+		</view>
+		<view class="xinxi_vie" bindtap="onToen" >
+			<image mode="widthFix" src="../../image/sebei.png"></image>
+			<text>设备管理</text>
+		</view>
+		<view class="xinxi_vie">
+			<image mode="widthFix" src="../../image/dingyue.png"></image>
+			<text>订阅设置</text>
+		</view>
+	</view>
+	<view class="info_bottom">
+		<view class="bottom_view">
+			<text class="bottom_text">帮助与反馈</text>
+			<text>></text>
+		</view>
+		<view class="bottom_view">
+			<text class="bottom_text">联系客服</text>
+				<button open-type="contact" type="primary" plain class="butt">客服</button>
+			<text>></text>
+		</view>
+		<view class="bottom_view">
+			<text class="bottom_text">帮助与反馈</text>
+			<button open-type="feedback" type="primary" plain class="butt">客服</button>
+			<text>></text>
+		</view>
+		<view class="bottom_view">
+			<text class="bottom_text">关于小程序</text>
+			<text>v 1.0.1 ></text>
+		</view>
+	</view>
+</view>

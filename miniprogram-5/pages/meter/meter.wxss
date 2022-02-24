@@ -1,0 +1,32 @@
+.meter_titel{
+  display: flex;
+  justify-content: space-around;
+
+}
+.meter .meter_but{
+  display: flex;
+}
+.titel{
+  display: flex;
+  border: 1rpx solid #5599ff;
+  background-color: aquamarine;
+  justify-content: center;
+  flex: 1;
+}
+.meter_name{
+  display: flex;
+}
+.name{
+  flex: 1;
+  display: flex;
+  font-size: 30rpx;
+  border: 3rpx solid #557dff;
+}
+.meter_name navigator{
+  flex: 1;
+}
+.meter_view{
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,52 @@
+/* 
+.Test_top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+} */
+.top_v{
+  display: flex;
+  flex-direction: column;
+}
+.top_v1{
+  display: flex;
+  justify-content: space-between;
+  color: #366d6d;
+  
+}
+.Test_input{
+  border: 1rpx solid #27b8b8;
+  border-radius: 35rpx;
+  margin: 10rpx;
+  height: 60rpx;
+  width: 80%;
+}
+/* .text_name{
+  display: flex;
+  width: 100%;
+  width: 156%;
+} */
+.ifview{
+  flex: 1;
+  display: flex;
+  border: 1rpx solid #e630af;
+  /* flex-direction: row; */
+  /* justify-content: center; */
+}
+.Test_check{
+  display: flex;
+  justify-content: space-around;
+}
+.Test_but{
+  display: flex;
+  justify-content: space-around;
+  margin: 10rpx 0;
+}
+.but_abnormal{
+  display: flex;
+  flex-direction: row;
+}
+.but_text{
+  margin-left: 6rpx;
+}

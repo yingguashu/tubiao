@@ -1,0 +1,35 @@
+<view>
+  <view class="Me_name">
+    <text style="color: rgb(141, 219, 193);display: block;">{{name}}</text>
+    <text style="font-size: 30rpx;">显示未完成的测点</text>
+      <switch bindchange="onSwitch"></switch>
+      <text style="margin-left: 200rpx;">详细信息</text>
+  </view>
+  <view>
+    <view class="Me_title">
+      <text>测点名称</text>
+      <text>创建时间</text>
+      <!-- <text>图标</text> -->
+      <text>设备编号</text>
+    </view>
+    <view wx:for="{{Result}}" wx:key="{{i}}">
+    <block wx:if="{{!en}}">
+      <view class="Me_top" wx:if="{{item.en}}">
+        <text class="top_text" data-iid="{{item.i}}" bindtap="onGetSurvey">{{item.n}}</text>
+        <view class="{{item.ic}}" style="color: rgb(92, 230, 230);"></view>
+        <text class="top_text">{{item.ct}}</text>
+        <text class="top_text">{{item.rd}}</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="Me_top">
+        <text class="top_text" data-iid="{{item.i}}" bindtap="onGetSurvey">{{item.n}}</text>
+        <view class="{{item.ic}}" style="color: rgb(92, 230, 230);"></view>
+        <text class="top_text">{{item.ct}}</text>
+        <text class="top_text">{{item.rd}}</text>
+      </view>
+    </block>
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<view class="meter">
+  <view class="meter_but">
+    <button type="primary" size="mini" plain bindtap="handGetmester">获取钢筋计数据</button>
+    <button type="primary" size="mini" plain bindtap="handSetsbfc">暂时图表数据</button>
+  </view>
+  <view class="meter_titel">
+    <text class="titel">设备编号</text>
+    <text class="titel">采集时间</text>
+  </view>
+  <view wx:for="{{meter}}" wx:key="t">
+    <view class="meter_name">
+      <text class="name" bindtap="handDown" data-id="{{index}}">{{item.i}}</text>
+      <navigator url="../mester/mester?index={{index}}&i={{item.i}}&t={{item.t}}">
+        <text class="name">{{item.t}}
+        </text>
+      </navigator>
+      <text bindtap="handSetToday" data-i="{{item.i}}" data-hour="{{item.t}}">>>></text>
+    </view>
+    <view hidden="{{!(flag==index)}}" class="meter_view">
+    <mee index="{{index}}"></mee>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<view class="mester">
+  <view class="mester_title">
+    <text class="name">id</text>
+    <text class="name">钢筋计力度大小</text>
+    <text class="name">温度/°C</text>
+  </view>
+    <view wx:for="{{d}}" wx:key="f" class="mester_text">
+      <text class="text">{{index}}</text>
+      <text class="text">{{item.f}}</text>
+      <text class="text">{{item.t}}</text>
+    </view>
+    <!-- <button bindtap="but">获取数据</button> -->
+</view>

@@ -1,0 +1,14 @@
+<view>
+  <view class="Test_top">
+    <!-- 获取输入的设备编号 -->
+    <input type="text" confirm-type="go" class="Test_input" bindblur="name" name="Equipment" maxlength="20"></input>
+    <button bindtap="onTest" size="mini" type="primary">获取</button>
+  </view>
+  <view class="loca_text">
+    <view class="text_title">
+    </view>
+    <view class="text_name" wx:for="{{content}}">
+    <view>{{item}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<view>
+  <view class="Eng_top">
+    <view class="top_view" wx:for="{{children}}" wx:key="groupId">
+      <view class="top_text">
+        <text class="text_name">项目名称</text>
+        {{item.name}}
+        <text style="display: block;margin: 18rpx 0;">类别：组织</text>
+        <text data-gid="{{item.groupId}}" data-name="{{item.name}}" bindtap="onGetMe">测点数量:查看下级测点  >>></text>
+        <view class="top_but">
+        <text style="color: rgb(92, 190, 190);font-size: 38rpx;">工况信息：无更新</text>
+        <text>报警信息：正常</text>
+        <text>设备数量：0台</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
